@@ -20,14 +20,16 @@ jobs:
         name: Build and push 16
         uses: docker/build-push-action@v6
         with:
+          platforms: linux/amd64,linux/arm64/v8
           file: Dockerfile-16
           push: true
-          tags: playmentsadmin/postgres-cloudnative-ivm:16.3
+          tags: playmentsadmin/postgres-cloudnativepg-ivm:16.4
 
       -
         name: Build and push PG 17
         uses: docker/build-push-action@v6
         with:
+          platforms: linux/amd64,linux/arm64/v8
           file: Dockerfile-17
           push: true
-          tags: playmentsadmin/postgres-cloudnative-ivm:17.0
+          tags: playmentsadmin/postgres-cloudnativepg-ivm:17.0
