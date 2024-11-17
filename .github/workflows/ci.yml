@@ -23,7 +23,7 @@ jobs:
           platforms: linux/amd64,linux/arm64/v8
           file: Dockerfile-16
           push: true
-          tags: playmentsadmin/postgres-cloudnativepg-ivm:16.4
+          tags: playmentsadmin/postgres-cloudnativepg-ivm:16.5
 
       -
         name: Build and push PG 17
