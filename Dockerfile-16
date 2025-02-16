@@ -1,4 +1,4 @@
-FROM ghcr.io/cloudnative-pg/postgresql:16.5 AS build
+FROM ghcr.io/cloudnative-pg/postgresql:16.7-bookworm AS build
 
 USER root
 
@@ -14,7 +14,7 @@ WORKDIR /usr/src/pg_ivm
 
 RUN make && make install
 
-FROM ghcr.io/cloudnative-pg/postgresql:16.5
+FROM ghcr.io/cloudnative-pg/postgresql:16.7-bookworm
 
 USER root
 
