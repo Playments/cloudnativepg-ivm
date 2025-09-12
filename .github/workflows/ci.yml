@@ -33,3 +33,12 @@ jobs:
           file: Dockerfile-17
           push: true
           tags: playmentsadmin/postgres-cloudnativepg-ivm:17.5-pg_ivm1.10
+
+      -
+        name: Build and push PG 18
+        uses: docker/build-push-action@v6
+        with:
+          platforms: linux/amd64,linux/arm64/v8
+          file: Dockerfile-18
+          push: true
+          tags: playmentsadmin/postgres-cloudnativepg-ivm:18.0-pg_ivm1.12
