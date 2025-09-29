@@ -1,4 +1,4 @@
-FROM ghcr.io/cloudnative-pg/postgresql:18.0-standard-trixie AS build
+FROM ghcr.io/cloudnative-pg/postgresql:18.0-standard-bookworm AS build
 
 USER root
 
@@ -14,7 +14,7 @@ WORKDIR /usr/src/pg_ivm
 
 RUN make && make install
 
-FROM ghcr.io/cloudnative-pg/postgresql:18.0-standard-trixie
+FROM ghcr.io/cloudnative-pg/postgresql:18.0-standard-bookworm
 
 USER root
 
